@@ -1,0 +1,175 @@
+*{
+margin:0; 
+padding: 0;
+box-sizing: border-box;
+
+}
+.container{
+    width: 400px;
+    height: 80vh;
+    background-color: #f5f8f8;
+    border-radius:20px ;
+    box-shadow: 10px 10px 10px #6677a7;
+}
+.upper-data{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px ;
+}
+
+.lower-data{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 52%;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.weather-data{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color:#abd6d6 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.location{
+    color: #03050b;
+    text-align: center;
+    font-size: 1.2em;
+}
+.tempreture{
+    color: aliceblue;
+    font-size: 4em;
+    text-align: center;
+    font-weight: 900px;
+}
+.more-info-label{
+    color: rgb(2, 0, 10);
+}
+.more-info-container{
+    flex:1;
+    background-color:#abd6d6 ;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-top: 1em;
+    height:60%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info-block{
+    width: 100%;
+    flex-direction: row;
+}
+.info-block-label{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding-left:5px ;
+}
+.info-block-label2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.info-block-label-span{
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+.search-container{
+    background: #e8eaea;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+    
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+    width: 400px;
+}
+
+.search-container .search-input{
+    background: #eeefef;
+    border: none;
+    outline:none;
+    width: 400px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+    color: #eff3f3;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+@media only screen and (max-width: 600px) {
+    .search-container {background: rgb(168, 229, 234) ;width:250px;}
+    .search-container .search-input{background: rgb(168, 229, 234)}
+
+  }
+  @media only screen and (min-width: 600px) {
+    .search-container {background:rgb(182, 237, 237) ;width:300px;}
+    .search-container .search-input{background: rgb(182, 237, 237)}
+
+
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .search-container {background:  rgb(178, 237, 237) ;width:340px;}
+    .search-container .search-input{background:  rgb(178, 237, 237)}
+
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    .search-container {background:  rgb(166, 223, 223);width:360px;}
+    .search-container .search-input{background: rgb(166, 223, 223)}
+
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .search-container {background: rgb(248, 248, 249) ;width:380px;}
+    .search-container .search-input{background: rgb(242, 243, 244)}
+
+  }

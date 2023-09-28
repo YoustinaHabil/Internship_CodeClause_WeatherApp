@@ -1,0 +1,212 @@
+
+* {
+    margin:0;
+    padding:0;
+  }
+
+  section {
+    height: 96vh;
+    padding: 2rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  article {
+    width: 400px;
+    height: 80vh;
+    background: #a0dcf5;
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 50px;
+  }
+
+  .weatherApp,  span {
+    font-family:Bungee;
+
+  }
+
+  .weatherApp {
+    transition: all ease-out .5s;
+    color: transparent;
+    text-shadow: 0 0 0px #f8f3f3;
+    font-size: 3rem;
+    padding: 0 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .weatherApp:before {
+    content: "";
+    width: 50%;
+    position: absolute;
+    border-bottom: solid 8px #fff;
+    left: -50%;
+    top: 50px;
+    transition: transform 0.5s cubic-bezier(1, -0.07, 0, 1.18);
+
+  }
+
+  .weatherApp span {
+    display: flex;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .weatherApp span:first-child:before, .weatherApp span:last-child:before {
+    content: attr(data-text);
+    color: #fff;
+    display: block;
+    transition: ease-out all 0.3s -0.1s;
+  }
+
+  .weatherApp span:first-child {
+    top: 0;
+  }
+
+  .weatherApp span:last-child {
+    bottom: 0;
+  }
+
+  .weatherApp span:first-child:before {
+    transform: translateY(81px);
+  }
+
+  .weatherApp span:last-child:before {
+    transform: translateY(-95px)
+  }
+
+  .weatherApp:hover {
+    transition: all ease-out 0s;
+    text-shadow: none;
+  }
+
+  .weatherApp:hover:before {
+    transform: translateX(42rem);
+  }
+
+  .weatherApp:hover span:first-child:before,
+  .weatherApp:hover span:last-child:before {
+    transition: ease-out all 0.3s;
+    transition-delay: .3s;
+  }
+
+  .weatherApp:hover span:first-child:before {
+    transform: translateY(0);
+  }
+
+  .weatherApp:hover span:last-child:before {
+    transform: translateY(-58px);
+  }
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #b2e0df;
+    width: 400px;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-2 { background-color: #eceeee; 
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 60px;
+}
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 150px;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px #6677a7;
+  display: flex;
+}
+
+.btn-two {
+  color: #0b0b0b;
+  transition: all 0.5s;
+  position: relative; 
+  display: flex;
+  width: 100%;
+}
+.btn-two span {
+  z-index: 2; 
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+}
+.btn-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-two:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(199, 227, 237, 0.916);
+}
+.btn-two:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(199, 227, 237, 0.916);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .btn {background: rgb(128, 195, 224) }
+  .article{background: #b2e0df;}
+  body{display: block;}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .btn {background: rgb(123, 200, 233);}
+  .article{background: #a7dedd;}}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .btn {background: rgb(115, 192, 224);}
+  .article{background: #9cd0cf;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .btn {background: rgb(118, 186, 215);}
+  .article{background: #9bcfce;}} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .btn {background: rgb(231, 234, 235);}
+  .article{background: #9bcecd;}}
+
+  .imageOne{
+    margin-bottom: 100px;
+  }

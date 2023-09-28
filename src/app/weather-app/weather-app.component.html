@@ -1,0 +1,58 @@
+<div class="search-container">
+  <input [(ngModel)]="cityName" (keyup.enter)="onSubmit()" type="text" name="search" placeholder="Enter CityName..." class="search-input">
+  <a href="#" class="search-btn">
+          <i class="fas fa-search"></i>      
+  </a>
+</div>
+<br>
+
+    <div class="container">
+    <div class="upper-data">
+  <div class="weather-data">
+
+    <img src="../assets/date.png" width="50px" height="50px">
+
+  <p> {{todaysDate | date:"EEE dd MMM"}}</p>
+
+    <div class="tempreturee">{{temperature}}°C</div>
+    <img slot="end" [src]=icon>
+    <div class="location">{{summary}}</div>
+  </div>
+<div name="location">{{cityName}}</div>
+    </div>
+    <div class="lower-data">
+  <div class="more-info-label">
+    More Information
+  </div>
+  <div class="more-info-container">
+    <div  class="info-block">
+      <div class="info-block-label">
+        <div class="Humidity">Humidity
+          <img src="../assets/humidity.png" width="50px" height="50px"  >
+        <div>{{humidity}}%</div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+
+        <div class="pressure">pressure
+          <img src="../assets/atmospheric.png" width="50px" height="50px" >
+        <div> {{pressure}}</div>
+        </div>
+        </div>
+        <div class="info-block-label2">
+
+        <div class="maxTemp">Suset
+          <img src="../assets/sunset.png" width="50px" height="50px">
+        <div class="tempreturee">{{temp_max}}°C </div>
+        </div>
+        <div class="wind">Wind
+          <img src="../assets/wind.png" width="50px" height="50px">
+        <div class="tempreturee"> {{temp_min}}°C </div>
+        </div>
+       
+  
+      </div>
+    </div>
+</div>
+  
+  
+    <router-outlet></router-outlet>
